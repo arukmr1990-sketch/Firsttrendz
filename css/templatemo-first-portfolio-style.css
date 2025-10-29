@@ -342,6 +342,9 @@ strong {
   padding-top: 15px;
   padding-bottom: 0;
 }
+.navbar-custom-blue {
+  background-color: #00008B; /* Example hex code for dark blue */
+}
 
 .navbar .container {
   border-radius: var(--border-radius-small);
@@ -1184,4 +1187,5 @@ strong {
     min-width: inherit;
   }
 }
+
 
