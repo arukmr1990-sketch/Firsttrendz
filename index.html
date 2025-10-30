@@ -13,37 +13,43 @@
       scroll-behavior: smooth;
     }
 
-    /* Banner */
-  /* ===== FULL-WIDTH BANNER FIX ===== */
-.banner-wrapper {
+   /* ===== FULL WIDTH, RESPONSIVE BANNER ===== */
+.banner-fullwrap {
+  width: 100vw;                     /* full viewport width */
   position: relative;
-  width: 100vw;                /* Full viewport width */
-  margin-left: calc(-50vw + 50%); /* Break out of Bootstrap container */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;               /* escape Bootstrap container */
+  margin-right: -50vw;
+  margin-top: 80px;                 /* push below navbar */
   overflow: hidden;
   background-color: #000;
-  margin-top: 80px;            /* Keeps below navbar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Banner Image */
-.banner-image {
-  width: 100vw;                /* Fill entire viewport width */
+/* Banner image fills width perfectly */
+.banner-img {
+  width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;         /* Shows whole banner image */
+  object-fit: cover;                /* ✅ fills width neatly */
 }
 
-/* Optional: if your image still doesn't stretch fully on large screens, use cover */
+/* Laptop height control */
 @media (min-width: 992px) {
-  .banner-image {
-    height: 70vh;
-    object-fit: cover;         /* fills screen width, crops slightly top/bottom */
+  .banner-img {
+    height: 70vh;                   /* fills most of screen height */
+    object-fit: cover;
   }
 }
 
+/* Mobile tweaks */
 @media (max-width: 768px) {
-  .banner-image {
+  .banner-img {
     height: auto;
-    object-fit: contain;       /* show full image on mobile */
+    object-fit: contain;
   }
 }
 
@@ -205,35 +211,6 @@ object-fit: cover;
       margin-top: 50px;
     }
     /* ===== Banner Fix ===== */
-/* ===== FULL-WIDTH BANNER FIX ===== */
-.banner-section {
-  width: 100vw;                 /* make it span full viewport width */
-  position: relative;
-  left: 50%;                    /* center it even if inside container */
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #000;       /* background behind transparent images */
-}
-
-.banner-full {
-  width: 100%;
-  height: auto;
-  max-height: 70vh;             /* control vertical size */
-  object-fit: cover;            /* fill space neatly */
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .banner-full {
-    max-height: 40vh;
-    object-fit: cover;
-  }
-}
 
 
 
@@ -313,11 +290,10 @@ object-fit: cover;
 
   <!-- ========================= BANNER ========================= -->
 <!-- ========================= BANNER ========================= -->
-<!-- ========================= BANNER ========================= -->
-<!-- ========================= BANNER ========================= -->
-<section id="home" class="banner-wrapper">
-  <img src="images/Banner.png" alt="First Trendz Banner" class="banner-image">
+<section id="home" class="banner-fullwrap">
+  <img src="images/Banner.png" alt="First Trendz Banner" class="banner-img">
 </section>
+
 
 
 
