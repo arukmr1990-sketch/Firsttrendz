@@ -81,24 +81,47 @@
 
   <!-- ========================= HEADER ========================= -->
 
+<!-- ========================= HEADER ========================= -->
 <header class="sticky-top shadow-sm bg-light">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light flex-column">
-    <div class="container d-flex flex-column align-items-center">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
 
       <!-- Centered Logo -->
-      <a class="navbar-brand mx-auto mb-2" href="#home">
+      <a class="navbar-brand mx-auto order-1" href="#home">
         <img src="images/logo.png" alt="First Trendz Logo" style="height:60px;">
       </a>
 
       <!-- Toggle Button (for mobile) -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarNav" aria-controls="navbarNav"
               aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- Nav Links -->
-      <div class="collapse navbar-collap
+      <div class="collapse navbar-collapse justify-content-center order-3" id="navbarNav">
+        <ul class="navbar-nav mx-auto text-center">
+          <li class="nav-item">
+            <a class="nav-link active fw-semibold" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="#featured-products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="login.html" class="btn btn-outline-dark btn-sm fw-bold rounded-pill px-3 ms-lg-3">
+              Login
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+</header>
+
 
 
   <!-- ========================= BANNER ========================= -->
