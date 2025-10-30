@@ -18,40 +18,36 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden; /* ✅ Prevent horizontal scrollbars */
+  overflow-x: hidden;
 }
 
-/* Wrapper forces true full width */
+/* Banner wrapper */
 .banner-outer {
   position: relative;
   width: 100%;
   background-color: #000;
   overflow: hidden;
-  margin-top: 80px; /* space for sticky navbar */
+  margin-top: 80px; /* keeps it below navbar */
+  text-align: center;
 }
 
-/* Image fills screen width perfectly */
+/* ✅ Place object-fit: contain and max-height here */
 .banner-img {
   display: block;
-  width: 100%;       /* ✅ Full width of the screen */
-  height: auto;      /* keep aspect ratio */
-  object-fit: contain; /* show full image, no cropping */
-  margin: 0;
+  width: 100%;
+  height: auto;           /* maintain image ratio */
+  object-fit: contain;    /* show full image, no cropping */
+  max-height: 75vh;       /* limits height on laptops */
+  margin: 0 auto;
   padding: 0;
 }
 
-/* Optional: height limit for laptops */
-@media (min-width: 992px) {
-  .banner-img {
-    max-height: 75vh;
-  }
-}
+/* Mobile tweak */
 @media (max-width: 768px) {
   .banner-img {
     max-height: 50vh;
   }
 }
-
 
 
  
