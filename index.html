@@ -84,25 +84,47 @@
 <!-- ========================= HEADER ========================= -->
 <header class="sticky-top shadow-sm bg-light">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <!-- Left Links -->
+      <ul class="navbar-nav d-none d-lg-flex flex-row">
+        <li class="nav-item mx-2">
+          <a class="nav-link fw-semibold" href="#home">Home</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link fw-semibold" href="#featured-products">Products</a>
+        </li>
+      </ul>
 
       <!-- Centered Logo -->
-      <a class="navbar-brand mx-auto order-1" href="#home">
-        <img src="images/logo.png" alt="First Trendz Logo" style="height:60px;">
+      <a class="navbar-brand mx-auto" href="#home">
+        <img src="images/logo.png" alt="Logo" style="height:60px;">
       </a>
 
-      <!-- Toggle Button (for mobile) -->
-      <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse"
+      <!-- Right Links -->
+      <ul class="navbar-nav d-none d-lg-flex flex-row">
+        <li class="nav-item mx-2">
+          <a class="nav-link fw-semibold" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="login.html" class="btn btn-outline-dark btn-sm fw-bold rounded-pill px-3">
+            Login
+          </a>
+        </li>
+      </ul>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
               data-bs-target="#navbarNav" aria-controls="navbarNav"
               aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Nav Links -->
-      <div class="collapse navbar-collapse justify-content-center order-3" id="navbarNav">
-        <ul class="navbar-nav mx-auto text-center">
+      <!-- Mobile Menu -->
+      <div class="collapse navbar-collapse d-lg-none" id="navbarNav">
+        <ul class="navbar-nav text-center">
           <li class="nav-item">
-            <a class="nav-link active fw-semibold" href="#home">Home</a>
+            <a class="nav-link fw-semibold" href="#home">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link fw-semibold" href="#featured-products">Products</a>
@@ -111,9 +133,7 @@
             <a class="nav-link fw-semibold" href="#contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a href="login.html" class="btn btn-outline-dark btn-sm fw-bold rounded-pill px-3 ms-lg-3">
-              Login
-            </a>
+            <a href="login.html" class="nav-link fw-semibold">Login</a>
           </li>
         </ul>
       </div>
