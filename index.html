@@ -172,18 +172,18 @@
     /* ===== Banner Fix ===== */
 .banner-img {
   width: 100%;
-  height: auto;
-  max-height: 600px; /* adjust if you want taller */
-  object-fit: contain; /* show full image */
+  height: 350px;        /* smaller banner height */
+  object-fit: cover;    /* fills neatly, no white space */
   display: block;
 }
 
-/* smaller screens */
+
 @media (max-width: 768px) {
   .banner-img {
-    max-height: 400px;
+    height: 250px;
   }
 }
+
 
 /* ===== Featured Products Fix ===== */
 .product-card .card-img {
