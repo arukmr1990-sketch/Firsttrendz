@@ -24,23 +24,29 @@
       text-align: center;
       margin-top: 80px;
     }
-    /* Reduce banner height */
+   /* Super compact banner */
 .hero-section-wrapper-2 {
-  min-height: 60vh !important;   /* reduce from 100vh to 60vh */
-  padding-top: 80px !important;  /* adjust top space for navbar */
-  padding-bottom: 40px !important;
+  min-height: 40vh !important;   /* reduce height further */
+  padding-top: 60px !important;  /* keep space for navbar */
+  padding-bottom: 20px !important;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* If banner text or image is too large, make it responsive */
-.hero-section-wrapper-2 h1,
+/* Optional: make banner content centered and smaller */
+.hero-section-wrapper-2 h1 {
+  font-size: 2rem !important;
+  margin-bottom: 0.5rem;
+}
+
 .hero-section-wrapper-2 p {
-  max-width: 700px;
-  margin: 0 auto;
+  font-size: 1rem !important;
+  margin-bottom: 0;
+  max-width: 600px;
   text-align: center;
 }
+
 
     .banner h1 {
       font-size: 3rem;
