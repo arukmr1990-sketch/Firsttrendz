@@ -29,7 +29,7 @@
       font-weight: bold;
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
     }
-   .navbar-nav .nav-link {
+  .navbar-nav .nav-link {
   color: #333 !important;
   transition: color 0.3s ease;
 }
@@ -43,8 +43,8 @@
 }
 .navbar-brand img:hover {
   transform: scale(1.05);
-}  transform: scale(1.05);
 }
+
 
 
     /* Featured Products */
@@ -102,8 +102,9 @@
 <header class="sticky-top shadow-sm bg-light">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container position-relative">
+
       <!-- Centered Logo -->
-      <a class="navbar-brand mx-auto position-absolute start-50 translate-middle-x" href="#home">
+      <a class="navbar-brand position-absolute start-50 translate-middle-x" href="#home">
         <img src="images/logo.png" alt="Logo" style="height:60px;">
       </a>
 
@@ -114,9 +115,9 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Navbar Links -->
-      <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
-        <ul class="navbar-nav mx-auto text-center">
+      <!-- Navbar Links (Right Aligned) -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+        <ul class="navbar-nav align-items-center">
           <li class="nav-item mx-2">
             <a class="nav-link fw-semibold" href="#home">Home</a>
           </li>
@@ -133,9 +134,11 @@
           </li>
         </ul>
       </div>
+
     </div>
   </nav>
 </header>
+
 
 
 
