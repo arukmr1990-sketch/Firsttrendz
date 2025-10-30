@@ -13,57 +13,39 @@
       scroll-behavior: smooth;
     }
 
-   /* ===== FULL WIDTH, RESPONSIVE BANNER ===== */
-.banner-fullwrap {
-  width: 100vw;                     /* full viewport width */
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;               /* escape Bootstrap container */
-  margin-right: -50vw;
-  margin-top: 80px;                 /* push below navbar */
-  overflow: hidden;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* ===== FORCE FULL-WIDTH BANNER (LAPTOP + MOBILE) ===== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* ✅ Prevent horizontal scrollbars */
 }
 
-/* Banner image fills width perfectly */
-/* ===== FULL WIDTH, NO CROPPING BANNER ===== */
-body {
+/* Wrapper forces true full width */
+.banner-outer {
+  position: relative;
+  width: 100%;
+  background-color: #000;
+  overflow: hidden;
+  margin-top: 80px; /* space for sticky navbar */
+}
+
+/* Image fills screen width perfectly */
+.banner-img {
+  display: block;
+  width: 100%;       /* ✅ Full width of the screen */
+  height: auto;      /* keep aspect ratio */
+  object-fit: contain; /* show full image, no cropping */
   margin: 0;
   padding: 0;
 }
 
-.banner-fullwrap {
-  position: relative;
-  width: 100vw;                         /* full viewport width */
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;                   /* escape Bootstrap container */
-  margin-right: -50vw;
-  margin-top: 80px;                     /* offset for sticky navbar */
-  overflow: hidden;
-  background-color: #000;               /* background behind image */
-  text-align: center;
-}
-
-/* ✅ Show full image without crop */
-.banner-img {
-  width: 100%;
-  height: auto;                         /* keep image ratio */
-  display: block;
-  object-fit: contain;                  /* show entire image */
-}
-
-/* Optional: limit the vertical size on very tall images */
+/* Optional: height limit for laptops */
 @media (min-width: 992px) {
   .banner-img {
-    max-height: 75vh;                   /* fits large screens nicely */
+    max-height: 75vh;
   }
 }
-
 @media (max-width: 768px) {
   .banner-img {
     max-height: 50vh;
@@ -72,60 +54,7 @@ body {
 
 
 
-
-
-   /* Super compact banner */
-.hero-section-wrapper-2 {
-  min-height: 40vh !important;   /* reduce height further */
-  padding-top: 60px !important;  /* keep space for navbar */
-  padding-bottom: 20px !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-    .banner-overlay {
-  text-shadow: 0 3px 8px rgba(0,0,0,0.7);
-  z-index: 2;
-}
-
-.hero-section-wrapper-2 img {
-  z-index: 1;
-  position: relative;
-}
-
-/* Optional: make banner content centered and smaller */
-.hero-section-wrapper-2 h1 {
-  font-size: 2rem !important;
-  margin-bottom: 0.5rem;
-}
-
-.hero-section-wrapper-2 p {
-  font-size: 1rem !important;
-  margin-bottom: 0;
-  max-width: 600px;
-  text-align: center;
-}
-    .hero-section-wrapper-2 {
-  overflow: hidden;
-  background-color: #000;
-}
-
-.banner-overlay-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
-  z-index: 2;
-}
-
-
-.hero-section-wrapper-2 img {
-  z-index: 1;
-  position: relative;
-}
+ 
     .product-card .card-img {
   width: 100% !important;
   height: 250px !important; /* Adjust height if you want */
@@ -308,9 +237,10 @@ body {
   <!-- ========================= BANNER ========================= -->
 <!-- ========================= BANNER ========================= -->
 <!-- ========================= BANNER ========================= -->
-<section id="home" class="banner-fullwrap">
-  <img src="images/Banner.png" alt="First Trendz Banner" class="banner-img">
-</section>
+<!-- ========================= BANNER ========================= -->
+<div id="home" class="Banner-outer">
+  <img src="images/banner.png" alt="First Trendz Banner" class="banner-img">
+</div>
 
 
 
