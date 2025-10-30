@@ -101,48 +101,36 @@
 <!-- ========================= HEADER ========================= -->
 <header class="sticky-top shadow-sm bg-light">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-      <!-- Left Links -->
-      <ul class="navbar-nav me-auto d-none d-lg-flex flex-row">
-        <li class="nav-item mx-3">
-          <a class="nav-link fw-semibold" href="#home">Home</a>
-        </li>
-        <li class="nav-item mx-3">
-          <a class="nav-link fw-semibold" href="#featured-products">Products</a>
-        </li>
-      </ul>
-
+    <div class="container position-relative">
       <!-- Centered Logo -->
       <a class="navbar-brand mx-auto position-absolute start-50 translate-middle-x" href="#home">
         <img src="images/logo.png" alt="Logo" style="height:60px;">
       </a>
 
-      <!-- Right Links -->
-      <ul class="navbar-nav ms-auto d-none d-lg-flex flex-row">
-        <li class="nav-item mx-3">
-          <a class="nav-link fw-semibold" href="#contact">Contact</a>
-        </li>
-        <li class="nav-item mx-3">
-          <a href="login.html" class="btn btn-outline-dark btn-sm fw-bold rounded-pill px-3">
-            Login
-          </a>
-        </li>
-      </ul>
-
-      <!-- Mobile Menu Toggle -->
+      <!-- Mobile Toggle -->
       <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
-              data-bs-target="#mobileMenu" aria-controls="mobileMenu"
+              data-bs-target="#navbarMenu" aria-controls="navbarMenu"
               aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Mobile Menu -->
-      <div class="collapse navbar-collapse d-lg-none" id="mobileMenu">
-        <ul class="navbar-nav text-center w-100 mt-3">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#featured-products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse justify-content-between" id="navbarMenu">
+        <ul class="navbar-nav mx-auto text-center">
+          <li class="nav-item mx-2">
+            <a class="nav-link fw-semibold" href="#home">Home</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link fw-semibold" href="#featured-products">Products</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link fw-semibold" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a href="login.html" class="btn btn-outline-dark btn-sm fw-bold rounded-pill px-3">
+              Login
+            </a>
+          </li>
         </ul>
       </div>
     </div>
