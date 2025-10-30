@@ -24,6 +24,24 @@
       text-align: center;
       margin-top: 80px;
     }
+    /* Reduce banner height */
+.hero-section-wrapper-2 {
+  min-height: 60vh !important;   /* reduce from 100vh to 60vh */
+  padding-top: 80px !important;  /* adjust top space for navbar */
+  padding-bottom: 40px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* If banner text or image is too large, make it responsive */
+.hero-section-wrapper-2 h1,
+.hero-section-wrapper-2 p {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
     .banner h1 {
       font-size: 3rem;
       font-weight: bold;
@@ -144,7 +162,7 @@
 
 
   <!-- ========================= BANNER ========================= -->
-  <section class="banner" id="home">
+  <section id="home" class="hero-section-wrapper-2">
     <div class="container">
       <h1>Welcome to First Trendz</h1>
       <p class="lead">Discover your favorite styles and trends today</p>
