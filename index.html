@@ -29,7 +29,7 @@
       font-weight: bold;
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
     }
-    .navbar-nav .nav-link {
+   .navbar-nav .nav-link {
   color: #333 !important;
   transition: color 0.3s ease;
 }
@@ -38,10 +38,12 @@
   text-decoration: underline;
 }
 .navbar-brand img {
+  height: 60px;
   transition: transform 0.3s ease;
 }
 .navbar-brand img:hover {
   transform: scale(1.05);
+}  transform: scale(1.05);
 }
 
 
@@ -99,29 +101,28 @@
 <!-- ========================= HEADER ========================= -->
 <header class="sticky-top shadow-sm bg-light">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container d-flex justify-content-between align-items-center">
-
+    <div class="container">
       <!-- Left Links -->
-      <ul class="navbar-nav d-none d-lg-flex flex-row">
-        <li class="nav-item mx-2">
+      <ul class="navbar-nav me-auto d-none d-lg-flex flex-row">
+        <li class="nav-item mx-3">
           <a class="nav-link fw-semibold" href="#home">Home</a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-3">
           <a class="nav-link fw-semibold" href="#featured-products">Products</a>
         </li>
       </ul>
 
       <!-- Centered Logo -->
-      <a class="navbar-brand mx-auto" href="#home">
+      <a class="navbar-brand mx-auto position-absolute start-50 translate-middle-x" href="#home">
         <img src="images/logo.png" alt="Logo" style="height:60px;">
       </a>
 
       <!-- Right Links -->
-      <ul class="navbar-nav d-none d-lg-flex flex-row">
-        <li class="nav-item mx-2">
+      <ul class="navbar-nav ms-auto d-none d-lg-flex flex-row">
+        <li class="nav-item mx-3">
           <a class="nav-link fw-semibold" href="#contact">Contact</a>
         </li>
-        <li class="nav-item mx-2">
+        <li class="nav-item mx-3">
           <a href="login.html" class="btn btn-outline-dark btn-sm fw-bold rounded-pill px-3">
             Login
           </a>
@@ -129,33 +130,25 @@
       </ul>
 
       <!-- Mobile Menu Toggle -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarNav" aria-controls="navbarNav"
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mobileMenu" aria-controls="mobileMenu"
               aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <!-- Mobile Menu -->
-      <div class="collapse navbar-collapse d-lg-none" id="navbarNav">
-        <ul class="navbar-nav text-center">
-          <li class="nav-item">
-            <a class="nav-link fw-semibold" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-semibold" href="#featured-products">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-semibold" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a href="login.html" class="nav-link fw-semibold">Login</a>
-          </li>
+      <div class="collapse navbar-collapse d-lg-none" id="mobileMenu">
+        <ul class="navbar-nav text-center w-100 mt-3">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#featured-products">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
         </ul>
       </div>
-
     </div>
   </nav>
 </header>
+
 
 
 
