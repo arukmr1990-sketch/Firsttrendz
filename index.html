@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Contact Us - Flat Bootstrap 5 Template</title>
+  <title>First Trendz</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- CSS -->
@@ -18,9 +18,9 @@
       margin: 0;
       padding: 0;
       background: #f9f9f9;
+      scroll-behavior: smooth;
     }
 
-    /* Header fix */
     .header-2 {
       position: fixed !important;
       top: 0 !important;
@@ -32,36 +32,73 @@
     }
 
     /* Banner Section */
-    .contact-banner {
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    .hero-banner {
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url('images/contact-banner.jpg') center/cover no-repeat;
       color: #fff;
       text-align: center;
-      padding: 200px 20px 160px;
+      padding: 220px 20px 160px;
       position: relative;
       margin-top: 90px;
     }
 
-    .contact-banner img {
-      width: 100px;
-      margin-bottom: 20px;
-      filter: brightness(0) invert(1);
-    }
-
-    .contact-banner h1 {
+    .hero-banner h1 {
       font-size: 52px;
       font-weight: 700;
       margin-bottom: 10px;
     }
 
-    .contact-banner p {
+    .hero-banner p {
       font-size: 18px;
       color: #f2f2f2;
+    }
+
+    /* Featured Products */
+    .featured-products {
+      background: #fff;
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .featured-products h2 {
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .product-card {
+      background: #f8f9fa;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .product-card h5 {
+      margin: 15px 0 5px;
+      font-weight: 600;
+    }
+
+    .product-card p {
+      color: #555;
+      font-size: 14px;
+      padding: 0 15px 15px;
     }
 
     /* Contact Section */
     .contact-section {
       padding: 80px 0;
+      background: #f9f9f9;
     }
 
     .contact-info,
@@ -70,6 +107,7 @@
       padding: 30px;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      height: 100%;
     }
 
     .contact-info h4 {
@@ -95,7 +133,7 @@
     }
 
     @media (max-width: 768px) {
-      .contact-banner h1 {
+      .hero-banner h1 {
         font-size: 36px;
       }
     }
@@ -103,14 +141,14 @@
 </head>
 
 <body>
-  <!-- ========================= Header start ========================= -->
+  <!-- ========================= Header ========================= -->
   <header class="header header-2">
     <div class="navbar-area">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-12">
             <nav class="navbar navbar-expand-lg">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="#home">
                 <img src="images/logo.png" alt="Logo" />
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -123,13 +161,11 @@
 
               <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent2">
                 <ul id="nav2" class="navbar-nav ml-auto">
-                  <li class="nav-item"><a class="page-scroll" href="index.html#home">Home</a></li>
-                  <li class="nav-item"><a class="page-scroll" href="index.html#services">Services</a></li>
-                  <li class="nav-item"><a class="page-scroll" href="index.html#about">About</a></li>
-                  <li class="nav-item"><a class="page-scroll" href="index.html#pricing">Pricing</a></li>
-                  <li class="nav-item"><a class="page-scroll active" href="contact.html">Contact</a></li>
+                  <li class="nav-item"><a class="page-scroll active" href="#home">Home</a></li>
+                  <li class="nav-item"><a class="page-scroll" href="#featured-products">Products</a></li>
+                  <li class="nav-item"><a class="page-scroll" href="#contact-section">Contact</a></li>
                 </ul>
-                <a href="#0" class="button button-sm radius-10 d-none d-lg-flex">Get Started</a>
+                <a href="#featured-products" class="button button-sm radius-10 d-none d-lg-flex">Shop Now</a>
               </div>
             </nav>
           </div>
@@ -137,80 +173,51 @@
       </div>
     </div>
   </header>
-  <!-- ========================= Header end ========================= -->
 
-  <!-- ========================= Banner Section ========================= -->
-  <section class="contact-banner">
-    <img src="images/logo.png" alt="Logo" />
-    <h1>Get in Touch</h1>
-    <p>We’d love to hear from you — drop us a message or visit us anytime.</p>
+  <!-- ========================= Hero Banner ========================= -->
+  <section id="home" class="hero-banner">
+    <h1>Welcome to First Trendz</h1>
+    <p>Your one-stop shop for stylish and trendy products</p>
   </section>
 
-  <!---- Product ------>
-  <!-- ========================= Featured Products Section ========================= -->
-<section id="featured-products" class="py-5 bg-light" style="margin-top:120px;">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Featured Products</h2>
-      <p class="text-muted">Check out our latest and best-selling products</p>
-    </div>
-
-    <div class="row g-4">
-      <!-- Product 1 -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100">
-          <img src="images/product1.jpg" class="card-img-top" alt="Product 1" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Product Name 1</h5>
-            <p class="text-muted mb-2">Short description of the product goes here.</p>
-            <h6 class="text-primary fw-bold mb-3">$29.99</h6>
-            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+  <!-- ========================= Featured Products ========================= -->
+  <section id="featured-products" class="featured-products">
+    <div class="container">
+      <h2>Featured Products</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="product-card">
+            <img src="images/product1.jpg" alt="Product 1">
+            <h5>Product One</h5>
+            <p>Short description about your product. Highlight key features.</p>
           </div>
         </div>
-      </div>
-
-      <!-- Product 2 -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100">
-          <img src="images/product2.jpg" class="card-img-top" alt="Product 2" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Product Name 2</h5>
-            <p class="text-muted mb-2">Short description of the product goes here.</p>
-            <h6 class="text-primary fw-bold mb-3">$39.99</h6>
-            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        <div class="col-md-4">
+          <div class="product-card">
+            <img src="images/product2.jpg" alt="Product 2">
+            <h5>Product Two</h5>
+            <p>Short description about your product. Highlight key features.</p>
           </div>
         </div>
-      </div>
-
-      <!-- Product 3 -->
-      <div class="col-md-4">
-        <div class="card border-0 shadow-sm h-100">
-          <img src="images/product3.jpg" class="card-img-top" alt="Product 3" />
-          <div class="card-body text-center">
-            <h5 class="card-title">Product Name 3</h5>
-            <p class="text-muted mb-2">Short description of the product goes here.</p>
-            <h6 class="text-primary fw-bold mb-3">$49.99</h6>
-            <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        <div class="col-md-4">
+          <div class="product-card">
+            <img src="images/product3.jpg" alt="Product 3">
+            <h5>Product Three</h5>
+            <p>Short description about your product. Highlight key features.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- ========================= Contact Section ========================= -->
-  <section class="contact-section">
+  <section id="contact-section" class="contact-section">
     <div class="container">
-      <div class="row g-4">
-        
-        <!-- Contact Info -->
-        <div class="col-lg-5">
-          <div class="contact-info">
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6 d-flex">
+          <div class="contact-info flex-fill">
             <h4>Our Office</h4>
-            <p><strong>Address:</strong><br>
-              123 Main Street, Anna Nagar, Chennai - 600040
-            </p>
+            <p><strong>Address:</strong><br>123 Main Street, Anna Nagar, Chennai - 600040</p>
             <p><strong>Email:</strong><br>
               <a href="mailto:yourmail@example.com">yourmail@example.com</a>
             </p>
@@ -218,13 +225,11 @@
               <a href="tel:+911234567890">+91 12345 67890</a>
             </p>
             <hr>
-            <p>We’ll respond within 24 hours — or call us directly during business hours.</p>
+            <p>We’ll respond within 24 hours — or call us during business hours.</p>
           </div>
         </div>
-
-        <!-- Contact Form -->
-        <div class="col-lg-7">
-          <div class="contact-form">
+        <div class="col-lg-6 d-flex">
+          <div class="contact-form flex-fill">
             <h4>Send Us a Message</h4>
             <form action="https://formspree.io/f/your-form-id" method="POST">
               <div class="mb-3">
@@ -249,8 +254,7 @@
 
   <!-- ========================= Footer ========================= -->
   <footer>
-    <p>&copy; 2025 Flat Bootstrap Template. All Rights Reserved.</p>
+    <p>&copy; 2025 First Trendz. All Rights Reserved.</p>
   </footer>
-
 </body>
 </html>
