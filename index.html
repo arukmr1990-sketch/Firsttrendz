@@ -7,39 +7,9 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    /* Header styling */
-    .header {
-      background: linear-gradient(90deg, #ff416c, #ff4b2b);
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 9999;
-    }
-    .navbar-brand img {
-      height: 40px;
-    }
-    .brand-text {
-      font-size: 1.4rem;
-      color: white;
-    }
-    .navbar-nav .nav-link {
-      color: white !important;
-      font-weight: 500;
-      margin-right: 15px;
-    }
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link.active {
-      color: #fff700 !important;
-    }
-    .navbar .btn-light {
-      background-color: #fff;
-      color: #ff4b2b;
-      font-weight: 600;
-    }
-    .navbar .btn-light:hover {
-      background-color: #ffe6e6;
-      color: #ff416c;
+    /* General layout tweaks */
+    body {
+      scroll-behavior: smooth;
     }
 
     /* Banner */
@@ -83,7 +53,7 @@
       padding: 80px 0;
     }
     .contact-info {
-      background: #ffefef;
+      background: #f8f9fa;
       padding: 30px;
       border-radius: 10px;
       height: 100%;
@@ -98,7 +68,7 @@
 
     /* Footer */
     footer {
-      background: #ff416c;
+      background: #212529;
       color: white;
       text-align: center;
       padding: 20px 0;
@@ -109,13 +79,13 @@
 <body>
 
   <!-- ========================= HEADER ========================= -->
-  <header class="header sticky-top shadow-sm">
-    <nav class="navbar navbar-expand-lg navbar-light">
+  <header class="sticky-top shadow-sm bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
         <!-- Brand / Logo -->
         <a class="navbar-brand d-flex align-items-center" href="#home">
-          <img src="images/logo.png" alt="First Trendz Logo" class="logo me-2">
-          <span class="brand-text fw-bold">First Trendz</span>
+          <img src="images/logo.png" alt="First Trendz Logo" class="me-2" style="height: 40px;">
+          <span class="fw-bold">First Trendz</span>
         </a>
 
         <!-- Toggle for mobile -->
@@ -138,7 +108,7 @@
               <a class="nav-link" href="#contact">Contact</a>
             </li>
             <li class="nav-item ms-lg-3">
-              <a href="login.html" class="btn btn-light btn-sm fw-bold rounded-pill px-3">
+              <a href="login.html" class="btn btn-outline-dark btn-sm fw-bold rounded-pill px-3">
                 Login
               </a>
             </li>
@@ -231,7 +201,7 @@
               <div class="mb-3">
                 <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
               </div>
-              <button type="submit" class="btn btn-danger w-100">Send Message</button>
+              <button type="submit" class="btn btn-dark w-100">Send Message</button>
             </form>
           </div>
         </div>
