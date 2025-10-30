@@ -14,16 +14,37 @@
     }
 
     /* Banner */
-    .banner {
-      background: url('images/banner.png') center/cover no-repeat;
-      color: white;
-      height: 70vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      margin-top: 80px;
-    }
+   /* === FIX: Full width banner below sticky navbar === */
+.banner-section {
+  width: 100vw;                    /* full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  margin-top: 80px;                /* ✅ offset for sticky navbar height */
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+}
+
+/* === Image scaling: show full image, not cropped === */
+.banner-img-fixed {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;                /* optional – limits tall banner */
+  object-fit: contain;             /* ✅ shows full banner, no cropping */
+  display: block;
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .banner-img-fixed {
+    max-height: 50vh;
+  }
+}
+
    /* Super compact banner */
 .hero-section-wrapper-2 {
   min-height: 40vh !important;   /* reduce height further */
@@ -285,12 +306,11 @@
 
   <!-- ========================= BANNER ========================= -->
 <!-- ========================= BANNER ========================= -->
+<!-- ========================= BANNER ========================= -->
 <section id="home" class="banner-section position-relative">
-  <img src="images/Banner.png" alt="First Trendz Banner" class="banner-full">
-  <div class="banner-overlay-text">
-    <!--<h1>First Trendz – Fit Your Size</h1>-->
-  </div>
+  <img src="images/Banner.png" alt="First Trendz Banner" class="banner-img-fixed">
 </section>
+
 
 
 
