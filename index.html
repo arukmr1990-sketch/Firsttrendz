@@ -14,36 +14,41 @@
     }
 
     /* Banner */
-   /* === FIX: Full width banner below sticky navbar === */
-.banner-section {
-  width: 100vw;                    /* full viewport width */
+  /* ===== FULL-WIDTH BANNER FIX ===== */
+.banner-wrapper {
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100vw;                /* Full viewport width */
+  margin-left: calc(-50vw + 50%); /* Break out of Bootstrap container */
   overflow: hidden;
-  margin-top: 80px;                /* ✅ offset for sticky navbar height */
   background-color: #000;
-  display: flex;
-  justify-content: center;
+  margin-top: 80px;            /* Keeps below navbar */
 }
 
-/* === Image scaling: show full image, not cropped === */
-.banner-img-fixed {
-  width: 100%;
+/* Banner Image */
+.banner-image {
+  width: 100vw;                /* Fill entire viewport width */
   height: auto;
-  max-height: 70vh;                /* optional – limits tall banner */
-  object-fit: contain;             /* ✅ shows full banner, no cropping */
   display: block;
+  object-fit: contain;         /* Shows whole banner image */
 }
 
-/* Responsive for mobile */
-@media (max-width: 768px) {
-  .banner-img-fixed {
-    max-height: 50vh;
+/* Optional: if your image still doesn't stretch fully on large screens, use cover */
+@media (min-width: 992px) {
+  .banner-image {
+    height: 70vh;
+    object-fit: cover;         /* fills screen width, crops slightly top/bottom */
   }
 }
+
+@media (max-width: 768px) {
+  .banner-image {
+    height: auto;
+    object-fit: contain;       /* show full image on mobile */
+  }
+}
+
+
+
 
    /* Super compact banner */
 .hero-section-wrapper-2 {
@@ -309,9 +314,11 @@ object-fit: cover;
   <!-- ========================= BANNER ========================= -->
 <!-- ========================= BANNER ========================= -->
 <!-- ========================= BANNER ========================= -->
-<section id="home" class="banner-section position-relative">
-  <img src="images/Banner.png" alt="First Trendz Banner" class="banner-img-fixed">
+<!-- ========================= BANNER ========================= -->
+<section id="home" class="banner-wrapper">
+  <img src="images/Banner.png" alt="First Trendz Banner" class="banner-image">
 </section>
+
 
 
 
