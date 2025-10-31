@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>First Trendz - Fits Your Foot</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
       font-family: 'Poppins', sans-serif;
@@ -12,50 +18,71 @@
 
     /* Navbar */
     .navbar {
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: #ffffff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    .navbar-brand {
-      font-weight: bold;
-      color: #000 !important;
-      font-size: 1.5rem;
+
+    .navbar-brand img {
+      height: 60px;
+      width: auto;
     }
 
     /* Hero Banner */
     .hero {
-      background: url('images/Banner.png') center/cover no-repeat;
-      height: 90vh;
+      position: relative;
+      width: 100%;
+      height: 55vh;
+      overflow: hidden;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* full image fits */
+      object-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       color: #fff;
       text-align: center;
-      background-color: rgba(0,0,0,0.3);
-      background-blend-mode: overlay;
     }
-    .hero h1 {
-      font-size: 3rem;
+
+    .hero-overlay h1 {
+      font-size: 2.5rem;
       font-weight: 700;
       letter-spacing: 2px;
     }
-    .hero p {
-      font-size: 1.2rem;
+
+    .hero-overlay p {
+      font-size: 1.1rem;
     }
 
     /* Product Cards */
     .products {
-      padding: 60px 0;
+      padding: 40px 0;
     }
+
     .product-card {
       border: none;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
       border-radius: 15px;
       transition: transform 0.3s ease;
     }
+
     .product-card:hover {
       transform: translateY(-8px);
     }
+
     .product-card img {
       border-radius: 15px 15px 0 0;
     }
@@ -70,21 +97,24 @@
     }
   </style>
 </head>
-
 <body>
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">First Trendz</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand mx-auto" href="#">
+        <img src="images/logo.png" alt="First Trendz Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#products">Products</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
@@ -92,9 +122,11 @@
 
   <!-- Hero Section -->
   <section class="hero" id="home">
-    <!--<h1>Fits Your Foot</h1>-->
-
-    <p>Comfort • Style • Confidence</p>
+    <img src="images/Banner.png" alt="First Trendz Banner">
+    <div class="hero-overlay">
+      <h1>Fits Your Foot</h1>
+      <p>Comfort • Style • Confidence</p>
+    </div>
   </section>
 
   <!-- Product Section -->
@@ -138,23 +170,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="py-5 bg-light text-center">
-    <div class="container">
-      <h2 class="fw-bold mb-4">About First Trendz</h2>
-      <p class="lead">At First Trendz, we bring you the latest in footwear fashion. Our mission is to provide comfort and style that fits every occasion. Whether you’re walking into a meeting or a casual day out — we’ve got your feet covered!</p>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-5 text-center">
-    <div class="container">
-      <h2 class="fw-bold mb-4">Contact Us</h2>
-      <p>📞 +91 99406 23869 | ✉️ Arunsandy@gmail.com</p>
-      <p>Follow us on Instagram & Facebook @FirstTrendz</p>
     </div>
   </section>
 
