@@ -23,31 +23,23 @@ html, body {
 
 /* ================== FIXED BANNER SECTION ================== */
 .banner-outer {
-  position: relative;
   width: 100%;
-  overflow: hidden;
+  height: 55vh; /* reduced from 70vh */
+  background-image: url("images/banner.png");
+  background-size: cover;        /* fills the banner area */
+  background-position: center;
+  background-repeat: no-repeat;
   margin-top: 0;
-  padding-top: 80px; /* navbar height */
-  background-color: #000;
-  text-align: center;
+  overflow: hidden;
 }
 
-.banner-img {
-  display: block;
-  width: 100%;
-  max-height: 70vh;     /* reduce height slightly */
-  object-fit: contain;  /* no cropping, full image visible */
-  object-position: center;
-  margin: 0 auto;
-  background-color: #000; /* fills any side gaps */
-}
-
-/* Smaller devices */
+/* For mobile */
 @media (max-width: 768px) {
-  .banner-img {
-    max-height: 55vh;
+  .banner-outer {
+    height: 45vh; /* smaller banner on mobile */
   }
 }
+
 
 
 
