@@ -23,8 +23,8 @@ html, body {
 
 .banner-outer {
   position: relative;
-  width: 100vw;
-  height: 80vh; /* Adjust height as needed */
+  width: 100%;
+  height: 75vh; /* full but not too tall */
   overflow: hidden;
   margin-top: 80px; /* below navbar */
 }
@@ -32,9 +32,7 @@ html, body {
 .banner-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-background-color: #000; /* optional black padding background */
-
+  object-fit: cover; /* fills space without gaps */
   display: block;
 }
 
@@ -48,24 +46,23 @@ background-color: #000; /* optional black padding background */
 
 
  
-    .product-card .card-img {
-  width: 100% !important;
-  height: 250px !important; /* Adjust height if you want */
-  overflow: hidden !important;
-  border-radius: 10px !important;
-  background-color: #f8f8f8 !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .product-card {
+  border: none;
+  transition: transform 0.3s ease;
+}
+.product-card:hover {
+  transform: scale(1.05);
 }
 
-.product-card .card-img img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
-  display: block !important;
+/* Consistent image box for all cards */
+.product-card .card-img-top {
+  width: 100%;
+  height: 250px; /* fixed equal height */
+  object-fit: cover; /* fills evenly */
+  object-position: center;
+  border-radius: 10px;
 }
+
 
 
 
@@ -156,25 +153,7 @@ background-color: #000; /* optional black padding background */
 
 
 
-/* ===== Featured Products Fix ===== */
-.product-card .card-img {
-  width: 100%;
-  height: 250px; /* same size for all images */
-  overflow: hidden;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f8f8f8;
-}
 
-.product-card .card-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* keeps consistent aspect */
-  object-position: center;
-  display: block;
-}
 
   </style>
 </head>
