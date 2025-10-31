@@ -11,17 +11,21 @@
 
   <style>
     /* ===== Navbar ===== */
-.navbar {
-  background-color: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.navbar-brand img {
+  height: 110px;   /* bigger logo */
+  width: auto;
 }
 
-.navbar-brand img {
-  height: 90px;           /* larger logo */
-  width: auto;
-  display: block;
-  margin: 0 auto;
+.navbar-nav .nav-link {
+  color: #000 !important;
+  margin: 0 10px;
+  font-weight: 500;
 }
+
+.navbar-nav .nav-link:hover {
+  color: #f1b900 !important; /* yellow hover */
+}
+
 
 /* ===== Hero Banner ===== */
 .hero {
@@ -75,38 +79,32 @@ footer {
 <body>
 
   <!-- NAVBAR: three area layout (left links, centered logo, right links) -->
-  <nav class="site-navbar navbar navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <!-- Toggler for mobile -->
-      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow-sm">
+  <div class="container">
+    <!-- Centered Logo -->
+    <a class="navbar-brand mx-auto" href="#">
+      <img src="images/logo.png" alt="First Trendz Logo">
+    </a>
 
-      <!-- Collapse area that becomes the menu on small screens -->
-      <div class="collapse navbar-collapse" id="mainNav">
-        <!-- LEFT navigation (on desktop shows left) -->
-        <ul class="navbar-nav nav-left me-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item d-lg-none"><a class="nav-link" href="#products">Products</a></li>
-        </ul>
+    <!-- Navbar toggler (for mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <!-- CENTER brand (keeps centered on desktop) -->
-        <div class="brand-wrap">
-          <a class="navbar-brand mx-auto" href="#">
-            <img src="images/logo.png" alt="First Trendz" class="site-logo">
-          </a>
-        </div>
-
-        <!-- RIGHT navigation (on desktop shows right) -->
-        <ul class="navbar-nav nav-right ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- spacer so the fixed navbar doesn't cover the hero top on page load -->
   <div style="height:76px;"></div>
