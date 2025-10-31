@@ -154,24 +154,37 @@
     }
     /* Center logo */
 .navbar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  padding: 15px 40px;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-brand {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  text-align: center;
+}
+
+.logo-img {
+  height: 90px;          /* make bigger if you want */
+  width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .navbar-nav {
-  margin-left: auto;
+  display: flex;
+  gap: 25px;
 }
 
-.navbar img {
-  height: 70px;  /* make logo larger */
+.nav-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #ffb400;
 }
 
   </style>
@@ -180,24 +193,20 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand mx-auto" href="#">
-        <img src="images/logo.png" alt="First Trendz">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="navbar-brand mx-auto">
+      <img src="images/logo.png" alt="First Trendz Logo" class="logo-img">
     </div>
-  </nav>
+    <div class="navbar-nav ms-auto">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#products" class="nav-link">Products</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+  </div>
+</nav>
+
 
   <!-- Hero -->
   <section id="home" class="hero">
