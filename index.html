@@ -22,28 +22,29 @@ html, body {
 
 
 /* ================== FIXED BANNER SECTION ================== */
+/* ================== FINAL RESPONSIVE BANNER ================== */
 .banner-outer {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-top: 0; /* remove top gap */
-  padding-top: 80px; /* pushes banner just below fixed navbar */
-  background-color: #000; /* fills space when image has padding */
+  margin-top: 0;
+  padding-top: 80px; /* keeps banner below navbar */
+  background-color: #000;
   text-align: center;
 }
 
 .banner-img {
   display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain;  /* show full image, no crop */
-  max-height: 80vh;     /* adjust how tall it should be */
+  height: 65vh;          /* reduced height from 80vh → 65vh */
+  object-fit: contain;   /* show full image without cropping */
   margin: 0 auto;
 }
 
+/* Smaller banner for mobile screens */
 @media (max-width: 768px) {
   .banner-img {
-    max-height: 60vh;
+    height: 50vh;
   }
 }
 
