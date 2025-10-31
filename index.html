@@ -25,29 +25,28 @@ html, body {
 .banner-outer {
   position: relative;
   width: 100%;
-  max-width: 100%;
   overflow: hidden;
-  margin-top: 80px; /* keeps below navbar */
+  margin-top: 0; /* remove top gap */
+  padding-top: 80px; /* pushes banner just below fixed navbar */
+  background-color: #000; /* fills space when image has padding */
   text-align: center;
-  background-color: #000; /* for padding areas if needed */
 }
 
-/* This keeps full image visible (no crop) */
 .banner-img {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;  /* show whole image */
-  max-height: 80vh;     /* limits height */
+  object-fit: contain;  /* show full image, no crop */
+  max-height: 80vh;     /* adjust how tall it should be */
   margin: 0 auto;
 }
 
-/* On small screens, reduce height slightly */
 @media (max-width: 768px) {
   .banner-img {
     max-height: 60vh;
   }
 }
+
 
 
 
