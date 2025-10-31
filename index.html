@@ -42,35 +42,27 @@
     }
 
     /* Hero Banner */
-    .hero {
-      background: url('images/Banner.png') center center no-repeat;
-      background-size: cover;
-      color: white;
-      text-align: center;
-      padding: 180px 15px;
-      position: relative;
-    }
+    /* Banner */
+.hero {
+  background-image: url('images/banner.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; /* shows full banner image without cropping */
+  background-color: #000;   /* fills extra space with black */
+  color: #fff;
+  text-align: center;
+  padding: 150px 0;         /* adjust vertical height of banner */
+}
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.4);
-    }
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
 
-    .hero h1, .hero p {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-    }
+.hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
 
     /* Products Section */
     .products {
