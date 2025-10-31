@@ -21,26 +21,23 @@ html, body {
   overflow-x: hidden;
 }
 
-/* Banner wrapper */
 .banner-outer {
   position: relative;
-  width: 100%;
-  background-color: #000;
+  width: 100vw;
+  height: 80vh; /* Adjust height as needed */
   overflow: hidden;
-  margin-top: 80px; /* keeps it below navbar */
-  text-align: center;
+  margin-top: 80px; /* below navbar */
 }
 
-/* ✅ Place object-fit: contain and max-height here */
 .banner-img {
-  display: block;
   width: 100%;
-  height: auto;           /* maintain image ratio */
-  object-fit: contain;    /* show full image, no cropping */
-  max-height: 75vh;       /* limits height on laptops */
-  margin: 0 auto;
-  padding: 0;
+  height: 100%;
+  object-fit: contain;
+background-color: #000; /* optional black padding background */
+
+  display: block;
 }
+
 
 /* Mobile tweak */
 @media (max-width: 768px) {
@@ -231,12 +228,10 @@ html, body {
 
 
   <!-- ========================= BANNER ========================= -->
-<!-- ========================= BANNER ========================= -->
-<!-- ========================= BANNER ========================= -->
-<!-- ========================= BANNER ========================= -->
-<div id="home" class="Banner-outer">
+<div id="home" class="banner-outer">
   <img src="images/Banner.png" alt="First Trendz Banner" class="banner-img">
 </div>
+
 
 
 
