@@ -47,18 +47,17 @@
    .hero {
   position: relative;
   width: 100%;
-  height: 80vh;
-  background-image: url("images/Banner.png");
+  height: 70vh; /* balanced height */
+  background: url("images/Banner.png") no-repeat center center;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: white;
+  text-align: center;
 }
+
 
 
     /* Products */
@@ -83,6 +82,11 @@
     .product-card img:hover {
       transform: scale(1.05);
     }
+    .card-img-top {
+  height: 250px;
+  object-fit: contain;
+}
+
 
     /* About */
     .about {
@@ -144,28 +148,44 @@
   </section>
 
   <!-- Featured Products -->
-  <section id="products" class="featured">
-    <div class="container">
-      <h2>Featured Shoes</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="product-card">
-            <img src="images/chefclog.png" alt="Shoe 1">
-          <h5>Chef Clog</h5>
-        </div>
-        <div class="product-card">
-         <img src="images/casualshoes_ind.jpg" alt="Shoe 2">
-          <h5 class="mt-3">casual shoes</h5>
- 
-        </div>
-        <div class="product-card">
-         <img src="images/Hospitalclog.jpg" alt="Shoe 3">
-          <h5 class="mt-3">Hospital Clog</h5>
-          </div>
+ <section id="featured" class="container my-5">
+  <h2 class="text-center mb-4">Featured Products</h2>
+  <div class="row">
+    <div class="col-md-4 col-sm-6 mb-4">
+      <div class="card h-100 text-center">
+        <img src="images/chefclog.png" alt="Shoe 1">
+        <div class="card-body">
+          <h5 class="card-title">Chef Clog</h5>
+          <p class="card-text">ART: L-2 | SIZE: 5x8, 6x9</p>
         </div>
       </div>
     </div>
-  </section>
+
+    <div class="col-md-4 col-sm-6 mb-4">
+      <div class="card h-100 text-center">
+        <img src="images/casualshoes_ind.jpg" alt="Shoe 2">
+ 
+        <div class="card-body">
+          <h5 class="card-title">casual shoes</h5>
+          <p class="card-text">ART: L-2 | SIZE: 5x8, 6x9</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more cards here -->
+    <div class="col-md-4 col-sm-6 mb-4">
+      <div class="card h-100 text-center">
+        <img src="images/Hospitalclog.jpg" alt="Shoe 3">
+ 
+        <div class="card-body">
+          <h5 class="card-titleHospital Clog</h5>
+          <p class="card-text">ART: L-2 | SIZE: 5x8, 6x9</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- About Section -->
   <section id="about" class="about">
@@ -193,13 +213,10 @@
         </div>
         <div class="col-md-6 text-center">
           <div class="map-container" style="width:100%; height:400px;">
-  <iframe 
-    src="https://www.google.com/maps/embed?pb=!1m18!..." 
-    width="100%" height="100%" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy">
-  </iframe>
+ <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.24594224544!2d80.2337!3d13.0418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266df37a2cb27%3A0xf35d18e8c6fbc9b!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1696762191000!5m2!1sen!2sin"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
 </div>
 
         </div>
