@@ -13,38 +13,46 @@
   <!-- Custom CSS -->
   <style>
     /* Navbar */
-    .navbar {
-      padding: 10px 40px;
-      background-color: #fff !important;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+   /* Navbar (yellow bar style) */
+.navbar {
+  background-color: #f8b800; /* Yellow background */
+  padding: 10px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-    .logo-img {
-      height: 90px;
-      width: auto;
-      display: block;
-      margin: 0 auto;
-    }
+/* Nav links */
+.navbar-nav .nav-link {
+  color: #fff !important;
+  background-color: black;
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin: 0 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 
-    .navbar-nav .nav-link {
-      color: #000;
-      font-weight: 500;
-      padding: 8px 15px;
-    }
+.navbar-nav .nav-link:hover {
+  background-color: #fff;
+  color: black !important;
+}
 
-    .navbar-nav .nav-link:hover {
-      color: #ffb400;
-    }
+/* Contact button on right */
+.contact-btn {
+  background-color: black;
+  color: #fff;
+  border-radius: 25px;
+  padding: 8px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    .navbar-toggler {
-      border: none;
-    }
-
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280,0,0,0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
+.contact-btn:hover {
+  background-color: #fff;
+  color: black;
+}
 
     /* Hero Banner */
   .hero {
@@ -124,27 +132,36 @@
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
-    <div class="container">
-      <a class="navbar-brand mx-auto" href="#home">
-        <img src="images/logo.png" alt="First Trendz Logo" class="logo-img">
-      </a>
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid px-4">
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#home">
+      <img src="images/logo.png" alt="First Trendz Logo" style="height:70px;">
+      <span class="ms-2 fw-bold text-dark">FIRST TRENDZ</span>
+    </a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav text-center">
-          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </nav>
+
+    <!-- Right Section -->
+    <div class="d-flex align-items-center">
+      <a href="#contact" class="contact-btn">Contact Us</a>
+    </div>
+  </div>
+</nav>
 
   <!-- Hero Section -->
   <section id="home" class="hero">
