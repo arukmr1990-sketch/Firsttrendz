@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>First Trendz</title>
   <link rel="icon" type="image/png" href="images/logo2.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 
   <!-- Bootstrap CSS -->
@@ -17,6 +19,25 @@
     html {
   scroll-padding-top: 100px; /* matches your yellow navbar height */
 }
+    /*right side contact us phone on nav */
+    .phone-link {
+  background-color: black;
+  color: white !important;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: 0.3s ease;
+}
+
+.phone-link:hover {
+  background-color: #ffcc00;
+  color: black !important;
+}
+/*--------*/
 
     /* Navbar */
    /* Navbar (yellow bar style) */
@@ -176,7 +197,12 @@
 
     <!-- Right Section -->
     <div class="d-flex align-items-center">
-      <a href="#contact" class="contact-btn">Contact Us</a>
+      <li class="nav-item">
+  <a href="tel:+919876543210" class="nav-link phone-link">
+    <i class="fas fa-phone-alt"></i> +91 99406 23869
+  </a>
+</li>
+
     </div>
   </div>
 </nav>
@@ -234,8 +260,10 @@
   <div class="container text-center">
     <h2>About Us</h2>
     <p class="mt-3">
-      At First Trendz, we bring you stylish and comfortable footwear that fits your every occasion.
-      Our goal is to ensure every step you take combines confidence and class.
+       First Trendz was incorporated in 2017.  
+      We specialize in the import and export of high-quality footwear, 
+      offering custom-made designs tailored to our customers’ specific needs.  
+      Our mission is to deliver stylish and comfortable footwear that fits every occasion.
     </p>
   </div>
 </section>
