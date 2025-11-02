@@ -14,21 +14,28 @@
   <style>
     /* Navbar */
    /* Navbar (yellow bar style) */
+/* Navbar (yellow bar style - taller like carwashdaily) */
 .navbar {
   background-color: #f8b800; /* Yellow background */
-  padding: 10px 30px;
+  padding: 18px 50px; /* ⬆️ increased padding for more height */
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+/* Logo */
+.navbar-brand img {
+  height: 80px; /* ⬆️ taller logo for better balance */
+  width: auto;
 }
 
 /* Nav links */
 .navbar-nav .nav-link {
   color: #fff !important;
   background-color: black;
-  border-radius: 20px;
-  padding: 8px 16px;
-  margin: 0 6px;
+  border-radius: 25px;
+  padding: 10px 20px; /* ⬆️ increased button size */
+  margin: 0 8px;
   font-weight: 600;
   transition: all 0.3s ease;
 }
@@ -42,8 +49,8 @@
 .contact-btn {
   background-color: black;
   color: #fff;
-  border-radius: 25px;
-  padding: 8px 20px;
+  border-radius: 30px;
+  padding: 10px 24px;
   font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
@@ -136,7 +143,8 @@
   <div class="container-fluid px-4">
     <!-- Logo -->
     <a class="navbar-brand d-flex align-items-center" href="#home">
-      <img src="images/logo.png" alt="First Trendz Logo" style="height:70px;">
+      <img src="images/logo.png" alt="First Trendz Logo" style="height:80px;">
+
       <span class="ms-2 fw-bold text-dark">FIRST TRENDZ</span>
     </a>
 
